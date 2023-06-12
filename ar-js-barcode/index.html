@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="assets/aframe.min.js"></script>
+    <script src="assets/aframe-extras.min.js"></script>
+    <script src="assets/aframe-ar.js"></script>
+    <script src="js/script.js"></script>
+    <title>Barcode detection</title>
+</head>
+
+<body>
+    <select id="model-selector" hidden>
+        <option value="" disabled selected>Choose model</option>
+        <option value="1">Buddha</option>
+        <option value="2">Solenoid</option>
+        <option value="3">Robotics</option>
+    </select>
+
+    <a-scene scene-controller embedded vr-mode-ui="enabled: false"
+        renderer="logarithmicDepthBuffer: true; colorManagement: true;"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;">
+
+        <a-assets>
+            <a-asset-item id="robotics" src="models/robotics/scene.gltf"></a-asset-item>
+            <a-asset-item id="solenoid" src="models/solenoid/scene.gltf"></a-asset-item>
+            <a-asset-item id="buddha" src="models/buddha/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-marker id="barcode-marker" smooth="true" smoothThreshold="10" type="barcode" value="0">
+            <a-entity visible="false" data-list-id="1" gltf-model="#buddha" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity visible="false" data-list-id="2" gltf-model="#solenoid" scale="40 40 40"
+                animation-mixer="clip: Animation; loop: infinite"></a-entity>
+            <a-entity visible="false" data-list-id="3" gltf-model="#robotics" scale="1 1 1"
+                animation-mixer="clip: Robotics; loop: infinite"></a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
