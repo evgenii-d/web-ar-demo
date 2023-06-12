@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="assets/aframe.min.js"></script>
-    <script src="assets/aframe-extras.min.js"></script>
-    <script src="assets/aframe-ar.js"></script>
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-extras.min.js"></script>
+    <script src="js/aframe-ar.js"></script>
     <script src="js/script.js"></script>
     <title>Barcode detection</title>
 </head>
@@ -25,9 +25,9 @@
         arjs="detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3;">
 
         <a-assets>
-            <a-asset-item id="robotics" src="models/robotics/scene.gltf"></a-asset-item>
-            <a-asset-item id="solenoid" src="models/solenoid/scene.gltf"></a-asset-item>
-            <a-asset-item id="buddha" src="models/buddha/scene.gltf"></a-asset-item>
+            <a-asset-item id="robotics" src="assets/models/robotics/scene.gltf"></a-asset-item>
+            <a-asset-item id="solenoid" src="assets/models/solenoid/scene.gltf"></a-asset-item>
+            <a-asset-item id="buddha" src="assets/models/buddha/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker id="barcode-marker" smooth="true" smoothThreshold="10" type="barcode" value="0">
