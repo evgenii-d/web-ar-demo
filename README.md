@@ -6,6 +6,40 @@
 |---|---|
 |![Barcode](assets/images/0_512.png)|![Marker](assets/images/qr-fox.png)|
 
+Marker for MindAR made by Stable Diffusion ([DreamShaper](https://civitai.com/models/4384?modelVersionId=94081) model) from [this QR code](assets/images/qr-google.png) using IMG2IMG transformation.
+
+### Stable Diffusion Parameters
+
+Prompt: `red fox face, hdr, close-up photo`
+
+Negative prompt: `ugly, disfigured, low quality, blurry, nsfw, bad eyes, crooked eyes, smudged eyes, not clear eyes, bad ear, bad proportions, blurry`
+
+#### IMG2IMG Settings
+
+|Option|Value|
+|---|---|
+|Steps|20|
+|Sampler|Euler a|
+|CFG scale|7|
+|Seed|3410024854|
+|Size|512x512|
+|Model hash|853e7e85c4|
+|Model|dreamshaper_631BakedVae|
+|Denoising strength|0.75|
+
+#### ControlNet Settings
+
+|Option|Value|
+|---|---|
+|Preprocessor|tile_resample|
+|Model|control_v11f1e_sd15_tile [a371b31b]|
+|Weight|0.85|
+|Starting/ending|(0.12, 1)|
+|Resize mode|Crop and Resize|
+|Pixel perfect|False|
+|Control mode|Balanced|
+|Preprocessor params|(-1, 1, -1)|
+
 ## Frameworks
 
 - [A-Frame](https://github.com/aframevr/aframe/)
