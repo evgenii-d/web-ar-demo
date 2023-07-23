@@ -1,6 +1,6 @@
 # WebVR demo
 
-[Demo page](index.html)
+[Demo page](/index.html)
 
 |[Barcode for AR.js](assets/images/0_512.png)|[Marker for MindAR](assets/images/qr-fox.png)|
 |---|---|
