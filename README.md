@@ -1,4 +1,4 @@
-# WebVR demo
+# Web AR demo
 
 ## [Demo page](https://evgenii-d.github.io/webvr-demo/)
 
@@ -12,6 +12,7 @@
 - [AR.js](https://github.com/AR-js-org/AR.js) | [Docs](https://ar-js-org.github.io/AR.js-Docs/)
   - [Barcode Markers collection](https://github.com/nicolocarpignoli/artoolkit-barcode-markers-collection)
 - [MindAR](https://github.com/hiukim/mind-ar-js) | [Docs](https://hiukim.github.io/mind-ar-js-doc/)
+  - [Image Analyzer](https://pictarize.com/image-analyzer/?ref=mindar.org)
 
 ## Decoders
 
