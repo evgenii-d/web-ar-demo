@@ -1,6 +1,6 @@
 # WebVR demo
 
-[Demo page](https://evgenii-d.github.io/webvr-demo/)
+## [Demo page](https://evgenii-d.github.io/webvr-demo/)
 
 |[Barcode for AR.js](assets/images/0_512.png)|[Marker for MindAR](assets/images/qr-fox.png)|
 |---|---|
