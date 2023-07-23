@@ -1,0 +1,26 @@
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+#model-selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: .5rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    background: white;
+    border: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/2-mindar-image-tracking.css">
+    <script src="../js/aframe-v1.4.2.min.js"></script>
+    <script src="../js/aframe-extras.min.js"></script>
+    <script src="../js/mindar-image-aframe.prod.js"></script>
+    <script defer src="../js/2-mindar-image-tracking.js"></script>
+    <title>MindAR Image Tracking</title>
+</head>
+
+<body>
+    <select id="model-selector" hidden>
+        <option value="" disabled selected>Choose model</option>
+        <option value="1">Buddha</option>
+        <option value="2">Solenoid</option>
+        <option value="3">Robotics</option>
+    </select>
+
+    <a-scene id="ar-scene" mindar-image="imageTargetSrc: ../assets/models/target-image.mind; uiScanning:no;"
+        vr-mode-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
+        device-orientation-permission-ui="enabled: false"
+        gltf-model="dracoDecoderPath: ../js/decoders/; basisTranscoderPath: ../js/decoders/; meshoptDecoderPath: ../js/decoders/meshopt_decoder.js;">
+
+        <a-assets>
+            <a-asset-item id="robotics" src="../assets/models/robotics/scene.gltf"></a-asset-item>
+            <a-asset-item id="solenoid" src="../assets/models/solenoid/scene.gltf"></a-asset-item>
+            <a-asset-item id="buddha" src="../assets/models/buddha/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+        <a-entity id="image-marker" mindar-image-target="targetIndex: 0">
+            <a-entity visible="false" data-list-id="1" gltf-model="#buddha" scale="0.08 0.08 0.08"
+                rotation="90 0 0"></a-entity>
+            <a-entity visible="false" data-list-id="2" gltf-model="#solenoid" scale="35 35 35" rotation="90 0 0"
+                animation-mixer="clip: Animation; loop: infinite"></a-entity>
+            <a-entity visible="false" data-list-id="3" gltf-model="#robotics" scale="1.5 1.5 1.5" rotation="90 0 0"
+                animation-mixer="clip: Robotics; loop: infinite"></a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #497389;
+    background-image: linear-gradient(white 2px, transparent 2px),
+        linear-gradient(90deg, white 2px, transparent 2px),
+        linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 20px;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    background-color: #FFF;
+}
+
+ul a {
+    display: inline-block;
+    color: #FFF;
+    padding: 14px;
+    margin: 10px;
+    text-decoration: none;
+    background-color: #000;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+}
+
+ul a:hover {
+    color: #000;
+    background-color: #FFF;
+}
+
+#qrcode {
+    width: fit-content;
+    margin: auto;
+}
+
+#qrcode-title {
+    display: inline-block;
+    padding-top: 4px;
+}
